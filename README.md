@@ -1,2 +1,2 @@
 # rngdle
-This repository is my implementation of RNGdle.
+This repository is my implementation of [RNGdle](https://www.rngdle.com/).  The backend is heavily borrowed from the [RNGdle EP calculator](https://github.com/CubityFirst/rngdle-ep-calculator/tree/main). 
