@@ -21,7 +21,7 @@ export interface NumberScore {
     classifications: ScoredClassification[]
 }
 
-export function randomSixDigitNumber(): string {
+export function generateSixDigitNumber(): string {
     return Math.floor(Math.random() * 1_000_000)
         .toString()
         .padStart(6, '0')
