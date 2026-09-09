@@ -18,8 +18,8 @@ export interface NumberContext {
     runs: number[]
 }
 
-export function createNumberContext(n: number): NumberContext {
-    const s = String(n)
+export function createNumberContext(s: string): NumberContext {
+    const n = Number(s)
     const d = [...s].map(Number)
 
     const counts: Record<number, number> = {}

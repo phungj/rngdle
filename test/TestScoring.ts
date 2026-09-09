@@ -1,3 +1,3 @@
 import {scoreNumber} from "@/data/Scoring";
 
-console.dir(scoreNumber(340203), {depth: null});
+console.dir(scoreNumber("224466"), {depth: null});

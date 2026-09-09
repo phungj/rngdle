@@ -15,14 +15,20 @@ interface ScoredClassification {
 }
 
 export interface NumberScore {
-    number: number
+    number: string
     totalScore: number
 
     classifications: ScoredClassification[]
 }
 
-export function scoreNumber(n: number): NumberScore {
-    const context = createNumberContext(n)
+export function randomSixDigitNumber(): string {
+    return Math.floor(Math.random() * 1_000_000)
+        .toString()
+        .padStart(6, '0')
+}
+
+export function scoreNumber(s: string): NumberScore {
+    const context = createNumberContext(s)
 
     const earned = CLASSIFICATIONS.filter(
         classification => {
@@ -83,7 +89,7 @@ export function scoreNumber(n: number): NumberScore {
         .sort((a, b) => b.score - a.score)
 
     return {
-        number: n,
+        number: s,
         totalScore,
         classifications: results,
     }
